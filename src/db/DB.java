@@ -1,6 +1,6 @@
-package br.com.wel.db;
+package db;
 
-import br.com.wel.db.exeception.DbException;
+import db.exeception.DbException;
 
 import java.io.FileInputStream;
 import java.io.IOException;
