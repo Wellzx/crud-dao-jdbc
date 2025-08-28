@@ -1,6 +1,6 @@
 # CRUD DAO JDBC
 
-Projeto de exemplo em Java para manipulação de dados em banco relacional utilizando JDBC. Baseado em um curso da Udemy, com modificações e melhorias próprias.
+Projeto de exemplo em Java para manipulação de dados em banco relacional utilizando JDBC. Insparado em um curso da udemy, com modificações e melhorias próprias.
 
 ## Tecnologias
 
@@ -16,7 +16,7 @@ Projeto de exemplo em Java para manipulação de dados em banco relacional utili
 - **model.dao**: interfaces DAO  
 - **model.dao.impl**: implementação JDBC dos DAOs  
 - **db**: classe de conexão com banco e exceções personalizadas  
-- **db.application**: classes de teste `Program` e `Program2`  
+- **db.application**: classes de teste `SellerTest` e `DepartmentTest`  
 
 ## Banco de Dados
 
