@@ -2,6 +2,7 @@ package model.dao.impl;
 
 import db.DB;
 import db.exeception.DbException;
+import db.exeception.DbIntegrityException;
 import model.dao.DepartmentDao;
 import model.entities.Department;
 
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class DepartmentDaoJDBC implements DepartmentDao {
 
-    private Connection conn = null;
+    private Connection conn;
 
     public DepartmentDaoJDBC(Connection conn) {
         this.conn = conn;
@@ -76,7 +77,23 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 
     @Override
     public void deleteById(Integer id) {
+        PreparedStatement st = null;
+        try {
+            st = conn.prepareStatement(
+                    "DELETE FROM department WHERE Id = ?");
 
+            st.setInt(1, id);
+
+            int rows = st.executeUpdate();
+            if (rows == 0) {
+                throw new DbException("There is no department with that ID");
+            }
+
+        } catch (SQLException e) {
+            throw new DbIntegrityException(e.getMessage());
+        } finally {
+            DB.closeStatement(st);
+        }
     }
 
     @Override

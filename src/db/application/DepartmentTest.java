@@ -7,7 +7,7 @@ import model.entities.Department;
 import java.util.List;
 import java.util.Scanner;
 
-public class Program2 {
+public class DepartmentTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -35,6 +35,11 @@ public class Program2 {
         System.out.println("Update complete!");
 
         System.out.println("\n=== TEST 5: delete ===");
+        System.out.println("Enter id for delete test: ");
+        int id = sc.nextInt();
+        departmentDao.deleteById(id);
+        System.out.println("Delete completed!");
 
+        sc.close();
     }
 }
