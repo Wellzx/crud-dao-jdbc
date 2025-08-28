@@ -11,7 +11,17 @@ public class Program2 {
 
         DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 
-        System.out.println("=== TEST 1: seller findById ===");
+        System.out.println("=== TEST 1: findById ===");
+
+        System.out.println("=== TEST 2: findAll ===");
+
+        System.out.println("=== TEST 3: insert ===");
+
+        System.out.println("=== TEST 4: update ===");
+
+        System.out.println("=== TEST 5: delete ===");
+
+
     }
 
 }
