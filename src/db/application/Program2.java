@@ -2,6 +2,7 @@ package db.application;
 
 import model.dao.DepartmentDao;
 import model.dao.impl.DaoFactory;
+import model.entities.Department;
 
 import java.util.Scanner;
 
@@ -12,6 +13,8 @@ public class Program2 {
         DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 
         System.out.println("=== TEST 1: findById ===");
+        Department department = departmentDao.findById(1);
+        System.out.println(department);
 
         System.out.println("=== TEST 2: findAll ===");
 
